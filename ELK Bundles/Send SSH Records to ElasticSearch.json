@@ -1,0 +1,56 @@
+//Event SSH
+if (event == "SSH_CLOSE") {
+	var date = new Date();
+	let payloadSSH = {
+    "ts" : date.toISOString(),
+	"eh_event" : "ssh_close",
+	"src_ip" : Flow.client.ipaddr,
+	"src_port" : Flow.client.port,
+	"dest_ip" : Flow.server.ipaddr,
+	"dest_port" : Flow.server.port,
+	"clientCipherAlgorithm" : SSH.clientCipherAlgorithm,
+	"clientCompressionAlgorithm" : SSH.clientCompressionAlgorithm,
+	"clientImplementation" : SSH.clientImplementation,
+	"clientMacAlgorithm" : SSH.clientMacAlgorithm,
+	"clientPkts" : SSH.clientPkts,
+ 	"duration" : SSH.duration,
+	 };
+	
+	var obj = {
+	'path' : '/extrahop/ssh',
+	'headers' : {},
+	'payload' : JSON.stringify(payloadSSH)};
+	 Remote.Syslog("ELK").notice(JSON.stringify(obj));
+	//debug ("SSH_CLOSE: " + JSON.stringify(obj));
+}	
+
+/*
+if (event == "SSH_TICK") {
+	var date = new Date();
+	let payloadSSH = {
+    "ts" : date.toISOString(),
+	"eh_event" : "ssh",
+	"src_ip" : Flow.client.ipaddr,
+	"src_port" : Flow.client.port,
+	"dest_ip" : Flow.server.ipaddr,
+	"dest_port" : Flow.server.port,
+	"clientCompressionAlgorithmsClientToServer" : SSH.clientCompressionAlgorithmsClientToServer,
+ 	"clientCompressionAlgorithmsServerToClient" : SSH.clientCompressionAlgorithmsServerToClient,
+ 	"clientEncryptionAlgorithmsClientToServer" : SSH.clientEncryptionAlgorithmsClientToServer,
+ 	"clientEncryptionAlgorithmsServerToClient" : SSH.clientEncryptionAlgorithmsServerToClient,
+ 	"clientKexAlgorithms" : SSH.clientKexAlgorithms,
+ 	"clientMacAlgorithmsClientToServer" : SSH.clientMacAlgorithmsClientToServer,
+ 	"hassh" : SSH.hassh,
+ 	"hasshAlgorithms" : SSH.hasshAlgorithms,
+ 	"hasshServer" : SSH.hasshServer,
+ 	"hasshServerAlgorithms" : SSH.hasshServerAlgorithms
+	 };
+	
+	var obj = {
+	'path' : '/extrahop/storage',
+	'headers' : {},
+	'payload' : JSON.stringify(payloadSSH)};
+	 //Remote.Syslog("ELK").notice(JSON.stringify(obj));
+	 debug ("SSH_TICK: " + JSON.stringify(obj));
+}	
+*/

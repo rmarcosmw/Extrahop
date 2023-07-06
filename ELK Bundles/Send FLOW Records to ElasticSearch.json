@@ -1,0 +1,50 @@
+if (event == "FLOW_TICK") {
+	var date = new Date();
+	var payloadFLOW = {
+		'ts' : date.toISOString(),
+		'eh_event' : 'flow_tick',
+		'client' : Flow.client.ipaddr,
+		'client_port' : Flow.client.port,
+		'server' : Flow.server.ipaddr,
+		'server_port' : Flow.server.port,
+		'store' : Flow.store,
+		'dscpName1' : Flow.dscpName1,
+		'bytes1' : Flow.bytes1,
+		'customDevices1' : Flow.customDevices1,
+		'device1' : Flow.device1,
+		'dscp1' : Flow.dscp1,
+		'dscpBytes1' : Flow.dscpBytes1,
+		'dscpPkts1' : Flow.dscpPkts1,
+		'l2Bytes1' : Flow.l2Bytes1,
+		'totalL2Bytes1' : Flow.totalL2Bytes1,
+		'fragPkts2' : Flow.fragPkts2,
+		'id' : Flow.id,
+		'ipaddr1' : Flow.ipaddr1,
+		'nagleDelay2' : Flow.nagleDelay2,
+		'dscpName2' : Flow.dscpName2,
+		'dscpBytes2' : Flow.dscpBytes2,
+		'bytes2' : Flow.bytes2,
+		'customDevices2' : Flow.customDevices2,
+		'device2' : Flow.device2,
+		'dscp2' : Flow.dscp2,
+		'dscpPkts2' : Flow.dscpPkts2,
+		'ipaddr2' : Flow.ipaddr2,
+		'l2Bytes2' : Flow.l2Bytes2,
+		'totalL2Bytes2' : Flow.totalL2Bytes2,
+		'ipproto' : Flow.ipproto,
+		'ipver' : Flow.ipver,
+		'isAborted' : Flow.isAborted,
+		'isExpired' : Flow.isExpired,
+		'l7proto' : Flow.l7proto,
+		'roundTripTime' : Flow.roundTripTime,
+		'vlan' : Flow.vlan,
+		'rcvWndThrottle1' : Flow.rcvWndThrottle1,
+		'rcvWndThrottle2' : Flow.rcvWndThrottle2,
+	};
+var obj = {
+	'path' : '/extrahop/FLOW',
+	'headers' : {},
+	'payload' : JSON.stringify(payloadFLOW)};
+	Remote.Syslog("ELK").notice(JSON.stringify(obj));
+	//debug('FLOW: ' + JSON.stringify(payloadFLOW));
+}
