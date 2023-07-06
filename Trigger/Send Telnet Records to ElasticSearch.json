@@ -1,0 +1,36 @@
+//Event Telnet
+if (event == "TELNET_MESSAGE") {
+	var date = new Date();
+	let payloadTelnet = {
+    "ts" : date.toISOString(),
+	"eh_event" : "telnet_message",
+	"src_ip" : Flow.client.ipaddr,
+	"src_port" : Flow.client.port,
+	"dest_ip" : Flow.server.ipaddr,
+	"dest_port" : Flow.server.port,
+	"command" : Telnet.command,
+	"line" : Telnet.line,
+	"option" : Telnet.option,
+	"optionData" : Telnet.optionData,
+	"receiverBytes" : Telnet.receiverBytes,
+	"receiverL2Bytes" : Telnet.receiverL2Bytes,
+	"receiverPkts" : Telnet.receiverPkts,
+	"receiverRTO" : Telnet.receiverRTO,
+	"receiverZeroWnd" : Telnet.receiverZeroWnd,
+	"record" : Telnet.record,
+	"roundTripTime" : Telnet.roundTripTime,
+	"senderBytes" : Telnet.senderBytes,
+	"senderL2Bytes" : Telnet.senderL2Bytes,
+	"senderPkts" : Telnet.senderPkts,
+	"senderRTO" : Telnet.senderRTO,
+	"senderZeroWnd" : Telnet.senderZeroWnd,
+	 };
+	
+	var obj = {
+	'path' : '/extrahop/telnet',
+	'headers' : {},
+	'payload' : JSON.stringify(payloadTelnet)};
+	 Remote.Syslog("ELK").notice(JSON.stringify(obj));
+	 //debug ("TELNET: " + JSON.stringify(obj));
+}	
+
