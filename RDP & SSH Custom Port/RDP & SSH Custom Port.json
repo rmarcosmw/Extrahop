@@ -1,0 +1,1986 @@
+{
+    ".meta": {
+        "comment": "to Scan RDP & SSH Unconventional Port Usage",
+        "created": 1594711997,
+        "name": "RDP & SSH Custom Port",
+        "version": "8.1.0.1526",
+        "version_min": "7.8"
+    },
+    "Dashboard": [
+        {
+            "author": "Marcos",
+            "description": null,
+            "name": "RDP & SSH Custom Port",
+            "object_type": "any",
+            "shortcut": "8Dprn",
+            "theme": [
+                [
+                    "name",
+                    "flat"
+                ]
+            ],
+            "type": "summary_dashboard",
+            "username": null
+        }
+    ],
+    "Metric": [
+        {
+            "author": "Marcos",
+            "base_metric": null,
+            "category": [
+                [
+                    "name",
+                    "custom"
+                ],
+                [
+                    "object_type",
+                    "application"
+                ]
+            ],
+            "desc_link": "",
+            "description": "Seen on 06-24-20 in trigger 'SSH-CustomPort'",
+            "dimension": "scalar",
+            "discover_time": 1592986280,
+            "field_name": "SSH_Rec_Cnt",
+            "filters": null,
+            "long_display": "Ssh Rec Cnt",
+            "record_types": "[]",
+            "short_display": "",
+            "source": "trigger",
+            "source_roles": "[]",
+            "stat_field_desc": null,
+            "topn_key_1_label": "",
+            "topn_key_2_label": "",
+            "type": "count",
+            "units": "integer"
+        },
+        {
+            "author": "Marcos",
+            "base_metric": null,
+            "category": [
+                [
+                    "name",
+                    "custom"
+                ],
+                [
+                    "object_type",
+                    "application"
+                ]
+            ],
+            "desc_link": "",
+            "description": "Seen on 06-24-20 in trigger 'RDP Tunneling'",
+            "dimension": "scalar",
+            "discover_time": 1592983562,
+            "field_name": "RDP_Custom_Cnt",
+            "filters": null,
+            "long_display": "Rdp Custom Cnt",
+            "record_types": "[]",
+            "short_display": "",
+            "source": "trigger",
+            "source_roles": "[]",
+            "stat_field_desc": null,
+            "topn_key_1_label": "",
+            "topn_key_2_label": "",
+            "type": "count",
+            "units": ""
+        },
+        {
+            "author": "Marcos",
+            "base_metric": [
+                [
+                    "field_name",
+                    "SSH_Rec_Cnt"
+                ],
+                [
+                    "category",
+                    [
+                        [
+                            "name",
+                            "custom"
+                        ],
+                        [
+                            "object_type",
+                            "application"
+                        ]
+                    ]
+                ],
+                [
+                    "type",
+                    "count"
+                ]
+            ],
+            "category": [
+                [
+                    "name",
+                    "custom_detail"
+                ],
+                [
+                    "object_type",
+                    "application"
+                ]
+            ],
+            "desc_link": "",
+            "description": "Seen on 05-29-20 in trigger 'SSH-CustomPort'",
+            "dimension": "topn_set",
+            "discover_time": 1590738079,
+            "field_name": "sshRecord_port",
+            "filters": null,
+            "long_display": "Ssh Record Port",
+            "record_types": "[]",
+            "short_display": "",
+            "source": "trigger",
+            "source_roles": "[]",
+            "stat_field_desc": null,
+            "topn_key_1_label": "Server Port",
+            "topn_key_2_label": "",
+            "type": "count",
+            "units": ""
+        },
+        {
+            "author": "Marcos",
+            "base_metric": [
+                [
+                    "field_name",
+                    "SSH_Rec_Cnt"
+                ],
+                [
+                    "category",
+                    [
+                        [
+                            "name",
+                            "custom"
+                        ],
+                        [
+                            "object_type",
+                            "application"
+                        ]
+                    ]
+                ],
+                [
+                    "type",
+                    "count"
+                ]
+            ],
+            "category": [
+                [
+                    "name",
+                    "custom_detail"
+                ],
+                [
+                    "object_type",
+                    "application"
+                ]
+            ],
+            "desc_link": "",
+            "description": "Seen on 06-02-20 in trigger 'SSH-CustomPort'",
+            "dimension": "topn_set",
+            "discover_time": 1591078574,
+            "field_name": "sshRecord_cport",
+            "filters": null,
+            "long_display": "Ssh Record Cport",
+            "record_types": "[]",
+            "short_display": "",
+            "source": "trigger",
+            "source_roles": "[]",
+            "stat_field_desc": null,
+            "topn_key_1_label": "Client port",
+            "topn_key_2_label": "",
+            "type": "count",
+            "units": ""
+        },
+        {
+            "author": "Marcos",
+            "base_metric": [
+                [
+                    "field_name",
+                    "SSH_Rec_Cnt"
+                ],
+                [
+                    "category",
+                    [
+                        [
+                            "name",
+                            "custom"
+                        ],
+                        [
+                            "object_type",
+                            "application"
+                        ]
+                    ]
+                ],
+                [
+                    "type",
+                    "count"
+                ]
+            ],
+            "category": [
+                [
+                    "name",
+                    "custom_detail"
+                ],
+                [
+                    "object_type",
+                    "application"
+                ]
+            ],
+            "desc_link": "",
+            "description": "Seen on 05-29-20 in trigger 'SSH-CustomPort'",
+            "dimension": "topn_set",
+            "discover_time": 1590738079,
+            "field_name": "sshRecord_server",
+            "filters": null,
+            "long_display": "Ssh Record Server",
+            "record_types": "[]",
+            "short_display": "",
+            "source": "trigger",
+            "source_roles": "[]",
+            "stat_field_desc": null,
+            "topn_key_1_label": "Servers",
+            "topn_key_2_label": "",
+            "type": "count",
+            "units": ""
+        },
+        {
+            "author": "Marcos",
+            "base_metric": [
+                [
+                    "field_name",
+                    "SSH_Rec_Cnt"
+                ],
+                [
+                    "category",
+                    [
+                        [
+                            "name",
+                            "custom"
+                        ],
+                        [
+                            "object_type",
+                            "application"
+                        ]
+                    ]
+                ],
+                [
+                    "type",
+                    "count"
+                ]
+            ],
+            "category": [
+                [
+                    "name",
+                    "custom_detail"
+                ],
+                [
+                    "object_type",
+                    "application"
+                ]
+            ],
+            "desc_link": "",
+            "description": "Seen on 05-29-20 in trigger 'SSH-CustomPort'",
+            "dimension": "topn_set",
+            "discover_time": 1590738079,
+            "field_name": "sshRecord_client",
+            "filters": null,
+            "long_display": "Ssh Record Client",
+            "record_types": "[]",
+            "short_display": "",
+            "source": "trigger",
+            "source_roles": "[]",
+            "stat_field_desc": null,
+            "topn_key_1_label": "Clients",
+            "topn_key_2_label": "",
+            "type": "count",
+            "units": ""
+        },
+        {
+            "author": "Marcos",
+            "base_metric": [
+                [
+                    "field_name",
+                    "SSH_Rec_Cnt"
+                ],
+                [
+                    "category",
+                    [
+                        [
+                            "name",
+                            "custom"
+                        ],
+                        [
+                            "object_type",
+                            "application"
+                        ]
+                    ]
+                ],
+                [
+                    "type",
+                    "count"
+                ]
+            ],
+            "category": [
+                [
+                    "name",
+                    "custom_detail"
+                ],
+                [
+                    "object_type",
+                    "application"
+                ]
+            ],
+            "desc_link": "",
+            "description": "Seen on 06-02-20 in trigger 'SSH-CustomPort'",
+            "dimension": "topn_set",
+            "discover_time": 1591081375,
+            "field_name": "sshDetail",
+            "filters": null,
+            "long_display": "Ssh Detail",
+            "record_types": "[]",
+            "short_display": "",
+            "source": "trigger",
+            "source_roles": "[]",
+            "stat_field_desc": null,
+            "topn_key_1_label": "Ssh Detail",
+            "topn_key_2_label": "",
+            "type": "count",
+            "units": ""
+        },
+        {
+            "author": "Marcos",
+            "base_metric": [
+                [
+                    "field_name",
+                    "RDP_Custom_Cnt"
+                ],
+                [
+                    "category",
+                    [
+                        [
+                            "name",
+                            "custom"
+                        ],
+                        [
+                            "object_type",
+                            "application"
+                        ]
+                    ]
+                ],
+                [
+                    "type",
+                    "count"
+                ]
+            ],
+            "category": [
+                [
+                    "name",
+                    "custom_detail"
+                ],
+                [
+                    "object_type",
+                    "application"
+                ]
+            ],
+            "desc_link": "",
+            "description": "Seen on 06-02-20 in trigger 'RDP Tunneling'",
+            "dimension": "topn_set",
+            "discover_time": 1591078639,
+            "field_name": "RDPRecord_cport",
+            "filters": null,
+            "long_display": "Rdp Record Cport",
+            "record_types": "[]",
+            "short_display": "",
+            "source": "trigger",
+            "source_roles": "[]",
+            "stat_field_desc": null,
+            "topn_key_1_label": "Rdp Record Cport",
+            "topn_key_2_label": "",
+            "type": "count",
+            "units": ""
+        },
+        {
+            "author": "Marcos",
+            "base_metric": [
+                [
+                    "field_name",
+                    "RDP_Custom_Cnt"
+                ],
+                [
+                    "category",
+                    [
+                        [
+                            "name",
+                            "custom"
+                        ],
+                        [
+                            "object_type",
+                            "application"
+                        ]
+                    ]
+                ],
+                [
+                    "type",
+                    "count"
+                ]
+            ],
+            "category": [
+                [
+                    "name",
+                    "custom_detail"
+                ],
+                [
+                    "object_type",
+                    "application"
+                ]
+            ],
+            "desc_link": "",
+            "description": "Seen on 06-02-20 in trigger 'RDP Tunneling'",
+            "dimension": "topn_set",
+            "discover_time": 1591081162,
+            "field_name": "RDPDetail",
+            "filters": null,
+            "long_display": "Rdp Detail",
+            "record_types": "[]",
+            "short_display": "",
+            "source": "trigger",
+            "source_roles": "[]",
+            "stat_field_desc": null,
+            "topn_key_1_label": "Rdp Detail",
+            "topn_key_2_label": "",
+            "type": "count",
+            "units": ""
+        },
+        {
+            "author": "Marcos",
+            "base_metric": [
+                [
+                    "field_name",
+                    "RDP_Custom_Cnt"
+                ],
+                [
+                    "category",
+                    [
+                        [
+                            "name",
+                            "custom"
+                        ],
+                        [
+                            "object_type",
+                            "application"
+                        ]
+                    ]
+                ],
+                [
+                    "type",
+                    "count"
+                ]
+            ],
+            "category": [
+                [
+                    "name",
+                    "custom_detail"
+                ],
+                [
+                    "object_type",
+                    "application"
+                ]
+            ],
+            "desc_link": "",
+            "description": "Seen on 05-29-20 in trigger 'RDP Tunneling'",
+            "dimension": "topn_set",
+            "discover_time": 1590738566,
+            "field_name": "RDPRecord_client",
+            "filters": null,
+            "long_display": "Rdp Record Client",
+            "record_types": "[]",
+            "short_display": "",
+            "source": "trigger",
+            "source_roles": "[]",
+            "stat_field_desc": null,
+            "topn_key_1_label": "Rdp Record Client",
+            "topn_key_2_label": "",
+            "type": "count",
+            "units": "integer"
+        },
+        {
+            "author": "Marcos",
+            "base_metric": [
+                [
+                    "field_name",
+                    "RDP_Custom_Cnt"
+                ],
+                [
+                    "category",
+                    [
+                        [
+                            "name",
+                            "custom"
+                        ],
+                        [
+                            "object_type",
+                            "application"
+                        ]
+                    ]
+                ],
+                [
+                    "type",
+                    "count"
+                ]
+            ],
+            "category": [
+                [
+                    "name",
+                    "custom_detail"
+                ],
+                [
+                    "object_type",
+                    "application"
+                ]
+            ],
+            "desc_link": "",
+            "description": "Seen on 05-29-20 in trigger 'RDP Tunneling'",
+            "dimension": "topn_set",
+            "discover_time": 1590738566,
+            "field_name": "RDPRecord_port",
+            "filters": null,
+            "long_display": "Rdp Record Port",
+            "record_types": "[]",
+            "short_display": "",
+            "source": "trigger",
+            "source_roles": "[]",
+            "stat_field_desc": null,
+            "topn_key_1_label": "Rdp Record Port",
+            "topn_key_2_label": "",
+            "type": "count",
+            "units": ""
+        },
+        {
+            "author": "Marcos",
+            "base_metric": [
+                [
+                    "field_name",
+                    "RDP_Custom_Cnt"
+                ],
+                [
+                    "category",
+                    [
+                        [
+                            "name",
+                            "custom"
+                        ],
+                        [
+                            "object_type",
+                            "application"
+                        ]
+                    ]
+                ],
+                [
+                    "type",
+                    "count"
+                ]
+            ],
+            "category": [
+                [
+                    "name",
+                    "custom_detail"
+                ],
+                [
+                    "object_type",
+                    "application"
+                ]
+            ],
+            "desc_link": "",
+            "description": "Seen on 05-29-20 in trigger 'RDP Tunneling'",
+            "dimension": "topn_set",
+            "discover_time": 1590738566,
+            "field_name": "RDPRecord_server",
+            "filters": null,
+            "long_display": "Rdp Record Server",
+            "record_types": "[]",
+            "short_display": "",
+            "source": "trigger",
+            "source_roles": "[]",
+            "stat_field_desc": null,
+            "topn_key_1_label": "Rdp Record Server",
+            "topn_key_2_label": "",
+            "type": "count",
+            "units": ""
+        }
+    ],
+    "Region": [
+        {
+            "dashboard": [
+                [
+                    "object_type",
+                    "any"
+                ],
+                [
+                    "name",
+                    "RDP & SSH Custom Port"
+                ],
+                [
+                    "owner",
+                    null
+                ],
+                [
+                    "type",
+                    "summary_dashboard"
+                ]
+            ],
+            "name": "RDP & SSH Custom Port",
+            "uuid": "3d43fec759fb4daea57974e9dc537186"
+        }
+    ],
+    "RegionDimension": [
+        {
+            "grid": [
+                [
+                    "name",
+                    "pc"
+                ]
+            ],
+            "h": 17,
+            "region": [
+                [
+                    "uuid",
+                    "3d43fec759fb4daea57974e9dc537186"
+                ]
+            ],
+            "w": 12,
+            "x": 0,
+            "y": 0
+        }
+    ],
+    "SeriesGroupMetric": [
+        {
+            "calculation_opts": null,
+            "calculation_type": "count",
+            "index": 0,
+            "metric": [
+                [
+                    "field_name",
+                    "sshRecord_server"
+                ],
+                [
+                    "category",
+                    [
+                        [
+                            "name",
+                            "custom_detail"
+                        ],
+                        [
+                            "object_type",
+                            "application"
+                        ]
+                    ]
+                ],
+                [
+                    "type",
+                    "count"
+                ]
+            ],
+            "options": "{}",
+            "topn_key": null,
+            "widget_series_group": [
+                [
+                    "widget",
+                    [
+                        [
+                            "uuid",
+                            "76d9b817be2e4f5a967f692031307ee2"
+                        ]
+                    ]
+                ],
+                [
+                    "index",
+                    0
+                ]
+            ]
+        },
+        {
+            "calculation_opts": null,
+            "calculation_type": "count",
+            "index": 0,
+            "metric": [
+                [
+                    "field_name",
+                    "sshDetail"
+                ],
+                [
+                    "category",
+                    [
+                        [
+                            "name",
+                            "custom_detail"
+                        ],
+                        [
+                            "object_type",
+                            "application"
+                        ]
+                    ]
+                ],
+                [
+                    "type",
+                    "count"
+                ]
+            ],
+            "options": "{}",
+            "topn_key": null,
+            "widget_series_group": [
+                [
+                    "widget",
+                    [
+                        [
+                            "uuid",
+                            "de1dd8828a8e410bb16ba7780ad4a81a"
+                        ]
+                    ]
+                ],
+                [
+                    "index",
+                    0
+                ]
+            ]
+        },
+        {
+            "calculation_opts": null,
+            "calculation_type": "count",
+            "index": 0,
+            "metric": [
+                [
+                    "field_name",
+                    "sshRecord_client"
+                ],
+                [
+                    "category",
+                    [
+                        [
+                            "name",
+                            "custom_detail"
+                        ],
+                        [
+                            "object_type",
+                            "application"
+                        ]
+                    ]
+                ],
+                [
+                    "type",
+                    "count"
+                ]
+            ],
+            "options": "{}",
+            "topn_key": null,
+            "widget_series_group": [
+                [
+                    "widget",
+                    [
+                        [
+                            "uuid",
+                            "3ede408238464ce689894035a24e9643"
+                        ]
+                    ]
+                ],
+                [
+                    "index",
+                    0
+                ]
+            ]
+        },
+        {
+            "calculation_opts": null,
+            "calculation_type": "count",
+            "index": 0,
+            "metric": [
+                [
+                    "field_name",
+                    "RDPRecord_client"
+                ],
+                [
+                    "category",
+                    [
+                        [
+                            "name",
+                            "custom_detail"
+                        ],
+                        [
+                            "object_type",
+                            "application"
+                        ]
+                    ]
+                ],
+                [
+                    "type",
+                    "count"
+                ]
+            ],
+            "options": "{}",
+            "topn_key": null,
+            "widget_series_group": [
+                [
+                    "widget",
+                    [
+                        [
+                            "uuid",
+                            "b9939d7cecea42bcb590354f03e35fb3"
+                        ]
+                    ]
+                ],
+                [
+                    "index",
+                    0
+                ]
+            ]
+        },
+        {
+            "calculation_opts": null,
+            "calculation_type": "count",
+            "index": 0,
+            "metric": [
+                [
+                    "field_name",
+                    "RDPRecord_port"
+                ],
+                [
+                    "category",
+                    [
+                        [
+                            "name",
+                            "custom_detail"
+                        ],
+                        [
+                            "object_type",
+                            "application"
+                        ]
+                    ]
+                ],
+                [
+                    "type",
+                    "count"
+                ]
+            ],
+            "options": "{}",
+            "topn_key": null,
+            "widget_series_group": [
+                [
+                    "widget",
+                    [
+                        [
+                            "uuid",
+                            "18ebf26c1ed64335be9f4d280e576898"
+                        ]
+                    ]
+                ],
+                [
+                    "index",
+                    0
+                ]
+            ]
+        },
+        {
+            "calculation_opts": null,
+            "calculation_type": "count",
+            "index": 0,
+            "metric": [
+                [
+                    "field_name",
+                    "RDP_Custom_Cnt"
+                ],
+                [
+                    "category",
+                    [
+                        [
+                            "name",
+                            "custom"
+                        ],
+                        [
+                            "object_type",
+                            "application"
+                        ]
+                    ]
+                ],
+                [
+                    "type",
+                    "count"
+                ]
+            ],
+            "options": "{}",
+            "topn_key": null,
+            "widget_series_group": [
+                [
+                    "widget",
+                    [
+                        [
+                            "uuid",
+                            "518f0c11f99945c8ad48e93deaca783a"
+                        ]
+                    ]
+                ],
+                [
+                    "index",
+                    0
+                ]
+            ]
+        },
+        {
+            "calculation_opts": null,
+            "calculation_type": "count",
+            "index": 0,
+            "metric": [
+                [
+                    "field_name",
+                    "sshRecord_port"
+                ],
+                [
+                    "category",
+                    [
+                        [
+                            "name",
+                            "custom_detail"
+                        ],
+                        [
+                            "object_type",
+                            "application"
+                        ]
+                    ]
+                ],
+                [
+                    "type",
+                    "count"
+                ]
+            ],
+            "options": "{}",
+            "topn_key": null,
+            "widget_series_group": [
+                [
+                    "widget",
+                    [
+                        [
+                            "uuid",
+                            "759ea1032e314cad9eaec8fbfea83cbe"
+                        ]
+                    ]
+                ],
+                [
+                    "index",
+                    0
+                ]
+            ]
+        },
+        {
+            "calculation_opts": null,
+            "calculation_type": "count",
+            "index": 0,
+            "metric": [
+                [
+                    "field_name",
+                    "RDPDetail"
+                ],
+                [
+                    "category",
+                    [
+                        [
+                            "name",
+                            "custom_detail"
+                        ],
+                        [
+                            "object_type",
+                            "application"
+                        ]
+                    ]
+                ],
+                [
+                    "type",
+                    "count"
+                ]
+            ],
+            "options": "{}",
+            "topn_key": null,
+            "widget_series_group": [
+                [
+                    "widget",
+                    [
+                        [
+                            "uuid",
+                            "8bbc96a69a10426d840078a5a4536ed1"
+                        ]
+                    ]
+                ],
+                [
+                    "index",
+                    0
+                ]
+            ]
+        },
+        {
+            "calculation_opts": null,
+            "calculation_type": "count",
+            "index": 0,
+            "metric": [
+                [
+                    "field_name",
+                    "RDPRecord_server"
+                ],
+                [
+                    "category",
+                    [
+                        [
+                            "name",
+                            "custom_detail"
+                        ],
+                        [
+                            "object_type",
+                            "application"
+                        ]
+                    ]
+                ],
+                [
+                    "type",
+                    "count"
+                ]
+            ],
+            "options": "{}",
+            "topn_key": null,
+            "widget_series_group": [
+                [
+                    "widget",
+                    [
+                        [
+                            "uuid",
+                            "34bbec139bda4dbeb4dc1bc05b4ce05b"
+                        ]
+                    ]
+                ],
+                [
+                    "index",
+                    0
+                ]
+            ]
+        },
+        {
+            "calculation_opts": null,
+            "calculation_type": "count",
+            "index": 0,
+            "metric": [
+                [
+                    "field_name",
+                    "SSH_Rec_Cnt"
+                ],
+                [
+                    "category",
+                    [
+                        [
+                            "name",
+                            "custom"
+                        ],
+                        [
+                            "object_type",
+                            "application"
+                        ]
+                    ]
+                ],
+                [
+                    "type",
+                    "count"
+                ]
+            ],
+            "options": "{}",
+            "topn_key": null,
+            "widget_series_group": [
+                [
+                    "widget",
+                    [
+                        [
+                            "uuid",
+                            "bd5c7dfd50cb4d52a5369a50b55bbacd"
+                        ]
+                    ]
+                ],
+                [
+                    "index",
+                    0
+                ]
+            ]
+        }
+    ],
+    "SeriesGroupObject": [
+        {
+            "index": 0,
+            "object_key": [
+                [
+                    "application_id",
+                    "SSHCustomPort"
+                ],
+                [
+                    "capture_key",
+                    [
+                        [
+                            "macaddr",
+                            ""
+                        ]
+                    ]
+                ]
+            ],
+            "object_type": "application",
+            "widget_series_group": [
+                [
+                    "widget",
+                    [
+                        [
+                            "uuid",
+                            "76d9b817be2e4f5a967f692031307ee2"
+                        ]
+                    ]
+                ],
+                [
+                    "index",
+                    0
+                ]
+            ]
+        },
+        {
+            "index": 0,
+            "object_key": [
+                [
+                    "application_id",
+                    "SSHCustomPort"
+                ],
+                [
+                    "capture_key",
+                    [
+                        [
+                            "macaddr",
+                            ""
+                        ]
+                    ]
+                ]
+            ],
+            "object_type": "application",
+            "widget_series_group": [
+                [
+                    "widget",
+                    [
+                        [
+                            "uuid",
+                            "de1dd8828a8e410bb16ba7780ad4a81a"
+                        ]
+                    ]
+                ],
+                [
+                    "index",
+                    0
+                ]
+            ]
+        },
+        {
+            "index": 0,
+            "object_key": [
+                [
+                    "application_id",
+                    "SSHCustomPort"
+                ],
+                [
+                    "capture_key",
+                    [
+                        [
+                            "macaddr",
+                            ""
+                        ]
+                    ]
+                ]
+            ],
+            "object_type": "application",
+            "widget_series_group": [
+                [
+                    "widget",
+                    [
+                        [
+                            "uuid",
+                            "3ede408238464ce689894035a24e9643"
+                        ]
+                    ]
+                ],
+                [
+                    "index",
+                    0
+                ]
+            ]
+        },
+        {
+            "index": 0,
+            "object_key": [
+                [
+                    "application_id",
+                    "RDPCustomPort"
+                ],
+                [
+                    "capture_key",
+                    [
+                        [
+                            "macaddr",
+                            ""
+                        ]
+                    ]
+                ]
+            ],
+            "object_type": "application",
+            "widget_series_group": [
+                [
+                    "widget",
+                    [
+                        [
+                            "uuid",
+                            "b9939d7cecea42bcb590354f03e35fb3"
+                        ]
+                    ]
+                ],
+                [
+                    "index",
+                    0
+                ]
+            ]
+        },
+        {
+            "index": 0,
+            "object_key": [
+                [
+                    "application_id",
+                    "RDPCustomPort"
+                ],
+                [
+                    "capture_key",
+                    [
+                        [
+                            "macaddr",
+                            ""
+                        ]
+                    ]
+                ]
+            ],
+            "object_type": "application",
+            "widget_series_group": [
+                [
+                    "widget",
+                    [
+                        [
+                            "uuid",
+                            "18ebf26c1ed64335be9f4d280e576898"
+                        ]
+                    ]
+                ],
+                [
+                    "index",
+                    0
+                ]
+            ]
+        },
+        {
+            "index": 0,
+            "object_key": [
+                [
+                    "application_id",
+                    "RDPCustomPort"
+                ],
+                [
+                    "capture_key",
+                    [
+                        [
+                            "macaddr",
+                            ""
+                        ]
+                    ]
+                ]
+            ],
+            "object_type": "application",
+            "widget_series_group": [
+                [
+                    "widget",
+                    [
+                        [
+                            "uuid",
+                            "518f0c11f99945c8ad48e93deaca783a"
+                        ]
+                    ]
+                ],
+                [
+                    "index",
+                    0
+                ]
+            ]
+        },
+        {
+            "index": 0,
+            "object_key": [
+                [
+                    "application_id",
+                    "SSHCustomPort"
+                ],
+                [
+                    "capture_key",
+                    [
+                        [
+                            "macaddr",
+                            ""
+                        ]
+                    ]
+                ]
+            ],
+            "object_type": "application",
+            "widget_series_group": [
+                [
+                    "widget",
+                    [
+                        [
+                            "uuid",
+                            "759ea1032e314cad9eaec8fbfea83cbe"
+                        ]
+                    ]
+                ],
+                [
+                    "index",
+                    0
+                ]
+            ]
+        },
+        {
+            "index": 0,
+            "object_key": [
+                [
+                    "application_id",
+                    "RDPCustomPort"
+                ],
+                [
+                    "capture_key",
+                    [
+                        [
+                            "macaddr",
+                            ""
+                        ]
+                    ]
+                ]
+            ],
+            "object_type": "application",
+            "widget_series_group": [
+                [
+                    "widget",
+                    [
+                        [
+                            "uuid",
+                            "8bbc96a69a10426d840078a5a4536ed1"
+                        ]
+                    ]
+                ],
+                [
+                    "index",
+                    0
+                ]
+            ]
+        },
+        {
+            "index": 0,
+            "object_key": [
+                [
+                    "application_id",
+                    "RDPCustomPort"
+                ],
+                [
+                    "capture_key",
+                    [
+                        [
+                            "macaddr",
+                            ""
+                        ]
+                    ]
+                ]
+            ],
+            "object_type": "application",
+            "widget_series_group": [
+                [
+                    "widget",
+                    [
+                        [
+                            "uuid",
+                            "34bbec139bda4dbeb4dc1bc05b4ce05b"
+                        ]
+                    ]
+                ],
+                [
+                    "index",
+                    0
+                ]
+            ]
+        },
+        {
+            "index": 0,
+            "object_key": [
+                [
+                    "application_id",
+                    "SSHCustomPort"
+                ],
+                [
+                    "capture_key",
+                    [
+                        [
+                            "macaddr",
+                            ""
+                        ]
+                    ]
+                ]
+            ],
+            "object_type": "application",
+            "widget_series_group": [
+                [
+                    "widget",
+                    [
+                        [
+                            "uuid",
+                            "bd5c7dfd50cb4d52a5369a50b55bbacd"
+                        ]
+                    ]
+                ],
+                [
+                    "index",
+                    0
+                ]
+            ]
+        }
+    ],
+    "Trigger": [
+        {
+            "apply_all": false,
+            "author": "Marcos",
+            "comment": "RDP Custom Port",
+            "debug": true,
+            "disabled": false,
+            "events": "[\"RDP_TICK\"]",
+            "hints": "{}",
+            "name": "RDP Custom Port",
+            "script": "// Type trigger code below\nvar appName = \"RDPCustomPort\";\nvar app = Application (appName);\nvar RDPRecord_client = \"\";\nvar RDPRecord_server = \"\";\nvar RDPRecord_port = \"\";\nvar RDPRecord_cport = \"\";\nvar RDPDetail = \"\";\n\nif ( event == \"RDP_TICK\" && Flow.server.port !=3389) {\n    debug ('client : ' + Flow.client.ipaddr);\n    debug ('client port : ' + Flow.client.port);\n    debug ('server : ' + Flow.server.ipaddr);\n    debug ('server port: ' + Flow.server.port);\n      \n    RDPRecord_client = \"\" + Flow.client.ipaddr;\n    RDPRecord_server = \"\" + Flow.server.ipaddr;\n    RDPRecord_port = \"\" + Flow.server.port;\n    RDPRecord_cport = '' + Flow.client.port;\n    RDPDetail = 'Client ' + Flow.client.ipaddr + ' connect to ' + Flow.server.ipaddr + ' using port ' + Flow.server.port;\n    //Base Metric\n    app.metricAddCount(\"RDP_Custom_Cnt\", 1); \n\n    //Detail metrics of RDP_Custom_Cnt\n    app.metricAddDetailCount(\"RDPRecord_client\" , RDPRecord_client, 1);\n    app.metricAddDetailCount(\"RDPRecord_server\" , RDPRecord_server, 1);\n    app.metricAddDetailCount(\"RDPRecord_port\" , RDPRecord_port, 1);\n    app.metricAddDetailCount(\"RDPRecord_cport\", RDPRecord_cport, 1);\n    app.metricAddDetailCount(\"RDPDetail\", RDPDetail, 1);\n\n    /*\n    commitRecord(\"RDPClientPort\", RDPRecord_cport.toString());\n    commitRecord(\"RDPClientIP\", RDPRecord_client);\n    commitRecord(\"RDPServerIP\", RDPRecord_server);\n    commitRecord(\"RDPServerPort\", RDPRecord_port);\n    */\n   \n\n}\napp.commit()"
+        },
+        {
+            "apply_all": false,
+            "author": "Marcos",
+            "comment": "to see SSH session in customize port",
+            "debug": false,
+            "disabled": false,
+            "events": "[\"SSH_CLOSE\", \"SSH_TICK\"]",
+            "hints": "{}",
+            "name": "SSH-CustomPort",
+            "script": "// Type trigger code below\nvar appName = \"SSHCustomPort\";\nvar app = Application (appName);\nvar sshRecord_client = \"\";\nvar sshRecord_server = \"\";\nvar sshRecord_port = \"\";\nvar sshRecord_cport = \"\";\nvar sshDetail = \"\";\n\nif ( event == \"SSH_TICK\" && Flow.server.port !=22) {\n    debug ('client : ' + Flow.client.ipaddr);\n    debug ('client port : ' + Flow.client.port);\n    debug ('server : ' + Flow.server.ipaddr);\n    debug ('server port : ' + Flow.server.port);\n    \n    sshRecord_client = \"\" + Flow.client.ipaddr;\n    sshRecord_server = \"\" + Flow.server.ipaddr;\n    sshRecord_port = \"\" + Flow.server.port;\n    sshRecord_cport = \"\" + Flow.client.port;\n    sshDetail = 'Client ' + Flow.client.ipaddr + ' connect to ' + Flow.server.ipaddr + ' using port ' + Flow.server.port;\n    app.metricAddCount(\"SSH_Rec_Cnt\",1);\n\n    app.metricAddDetailCount(\"sshRecord_client\" , sshRecord_client, 1);\n    app.metricAddDetailCount(\"sshRecord_server\" , sshRecord_server, 1);\n    app.metricAddDetailCount(\"sshRecord_port\" , sshRecord_port, 1);\n    app.metricAddDetailCount(\"sshRecord_cport\", sshRecord_cport, 1);\n    app.metricAddDetailCount(\"sshDetail\", sshDetail, 1);\n}\napp.commit()"
+        }
+    ],
+    "Widget": [
+        {
+            "name": "SSH Details",
+            "options": "{\"ipLabelType\": \"host\", \"ipLabelShowCustomNames\": true}",
+            "region": [
+                [
+                    "uuid",
+                    "3d43fec759fb4daea57974e9dc537186"
+                ]
+            ],
+            "shortcut": null,
+            "text_widget_content": null,
+            "trend_calculation_opts": null,
+            "trend_calculation_type": null,
+            "trend_windowing_count": null,
+            "trend_windowing_model": null,
+            "type": "table",
+            "uuid": "de1dd8828a8e410bb16ba7780ad4a81a"
+        },
+        {
+            "name": "RDP Details",
+            "options": "{\"ipLabelType\": \"host\", \"ipLabelShowCustomNames\": true}",
+            "region": [
+                [
+                    "uuid",
+                    "3d43fec759fb4daea57974e9dc537186"
+                ]
+            ],
+            "shortcut": null,
+            "text_widget_content": null,
+            "trend_calculation_opts": null,
+            "trend_calculation_type": null,
+            "trend_windowing_count": null,
+            "trend_windowing_model": null,
+            "type": "table",
+            "uuid": "8bbc96a69a10426d840078a5a4536ed1"
+        },
+        {
+            "name": "Total RDP Uses Custom Port ",
+            "options": "{\"ipLabelType\": \"host\", \"ipLabelShowCustomNames\": true, \"hasAlertColor\": false, \"hasSparklines\": false, \"sorting\": \"added\"}",
+            "region": [
+                [
+                    "uuid",
+                    "3d43fec759fb4daea57974e9dc537186"
+                ]
+            ],
+            "shortcut": null,
+            "text_widget_content": null,
+            "trend_calculation_opts": null,
+            "trend_calculation_type": null,
+            "trend_windowing_count": null,
+            "trend_windowing_model": null,
+            "type": "tile",
+            "uuid": "518f0c11f99945c8ad48e93deaca783a"
+        },
+        {
+            "name": "Total SSH Uses Custom Ports",
+            "options": "{\"ipLabelType\": \"host\", \"ipLabelShowCustomNames\": true, \"hasAlertColor\": false, \"hasSparklines\": false, \"sorting\": \"added\"}",
+            "region": [
+                [
+                    "uuid",
+                    "3d43fec759fb4daea57974e9dc537186"
+                ]
+            ],
+            "shortcut": null,
+            "text_widget_content": null,
+            "trend_calculation_opts": null,
+            "trend_calculation_type": null,
+            "trend_windowing_count": null,
+            "trend_windowing_model": null,
+            "type": "tile",
+            "uuid": "bd5c7dfd50cb4d52a5369a50b55bbacd"
+        },
+        {
+            "name": "RDP Servers",
+            "options": "{\"ipLabelType\": \"host\", \"ipLabelShowCustomNames\": true, \"hasAlertColor\": false, \"hasSparklines\": false, \"sorting\": \"value\"}",
+            "region": [
+                [
+                    "uuid",
+                    "3d43fec759fb4daea57974e9dc537186"
+                ]
+            ],
+            "shortcut": null,
+            "text_widget_content": null,
+            "trend_calculation_opts": null,
+            "trend_calculation_type": null,
+            "trend_windowing_count": null,
+            "trend_windowing_model": null,
+            "type": "bar_chart",
+            "uuid": "34bbec139bda4dbeb4dc1bc05b4ce05b"
+        },
+        {
+            "name": "RDP Port Used",
+            "options": "{\"ipLabelType\": \"host\", \"ipLabelShowCustomNames\": true, \"showOther\": true, \"showTotalValue\": true, \"percentPrecision\": \"1\", \"hasAlertColor\": false, \"hasSparklines\": false, \"sorting\": \"added\", \"redColumns\": true}",
+            "region": [
+                [
+                    "uuid",
+                    "3d43fec759fb4daea57974e9dc537186"
+                ]
+            ],
+            "shortcut": null,
+            "text_widget_content": null,
+            "trend_calculation_opts": null,
+            "trend_calculation_type": null,
+            "trend_windowing_count": null,
+            "trend_windowing_model": null,
+            "type": "pie_chart",
+            "uuid": "18ebf26c1ed64335be9f4d280e576898"
+        },
+        {
+            "name": "SSH Servers",
+            "options": "{\"ipLabelType\": \"host\", \"ipLabelShowCustomNames\": true}",
+            "region": [
+                [
+                    "uuid",
+                    "3d43fec759fb4daea57974e9dc537186"
+                ]
+            ],
+            "shortcut": null,
+            "text_widget_content": null,
+            "trend_calculation_opts": null,
+            "trend_calculation_type": null,
+            "trend_windowing_count": null,
+            "trend_windowing_model": null,
+            "type": "bar_chart",
+            "uuid": "76d9b817be2e4f5a967f692031307ee2"
+        },
+        {
+            "name": "RDP Clients",
+            "options": "{\"ipLabelType\": \"host\", \"ipLabelShowCustomNames\": true, \"hasAlertColor\": false, \"hasSparklines\": false, \"sorting\": \"value\"}",
+            "region": [
+                [
+                    "uuid",
+                    "3d43fec759fb4daea57974e9dc537186"
+                ]
+            ],
+            "shortcut": null,
+            "text_widget_content": null,
+            "trend_calculation_opts": null,
+            "trend_calculation_type": null,
+            "trend_windowing_count": null,
+            "trend_windowing_model": null,
+            "type": "bar_chart",
+            "uuid": "b9939d7cecea42bcb590354f03e35fb3"
+        },
+        {
+            "name": "SSH Port Used",
+            "options": "{\"ipLabelType\": \"host\", \"ipLabelShowCustomNames\": true, \"showOther\": true, \"showTotalValue\": true, \"percentPrecision\": \"1\", \"hasAlertColor\": false, \"hasSparklines\": false, \"sorting\": \"value\"}",
+            "region": [
+                [
+                    "uuid",
+                    "3d43fec759fb4daea57974e9dc537186"
+                ]
+            ],
+            "shortcut": null,
+            "text_widget_content": null,
+            "trend_calculation_opts": null,
+            "trend_calculation_type": null,
+            "trend_windowing_count": null,
+            "trend_windowing_model": null,
+            "type": "pie_chart",
+            "uuid": "759ea1032e314cad9eaec8fbfea83cbe"
+        },
+        {
+            "name": "SSH Clients",
+            "options": "{\"ipLabelType\": \"host\", \"ipLabelShowCustomNames\": true}",
+            "region": [
+                [
+                    "uuid",
+                    "3d43fec759fb4daea57974e9dc537186"
+                ]
+            ],
+            "shortcut": null,
+            "text_widget_content": null,
+            "trend_calculation_opts": null,
+            "trend_calculation_type": null,
+            "trend_windowing_count": null,
+            "trend_windowing_model": null,
+            "type": "bar_chart",
+            "uuid": "3ede408238464ce689894035a24e9643"
+        }
+    ],
+    "WidgetDimension": [
+        {
+            "grid": [
+                [
+                    "name",
+                    "pc"
+                ]
+            ],
+            "h": 4,
+            "w": 6,
+            "widget": [
+                [
+                    "uuid",
+                    "759ea1032e314cad9eaec8fbfea83cbe"
+                ]
+            ],
+            "x": 6,
+            "y": 3
+        },
+        {
+            "grid": [
+                [
+                    "name",
+                    "pc"
+                ]
+            ],
+            "h": 4,
+            "w": 6,
+            "widget": [
+                [
+                    "uuid",
+                    "de1dd8828a8e410bb16ba7780ad4a81a"
+                ]
+            ],
+            "x": 6,
+            "y": 13
+        },
+        {
+            "grid": [
+                [
+                    "name",
+                    "pc"
+                ]
+            ],
+            "h": 3,
+            "w": 6,
+            "widget": [
+                [
+                    "uuid",
+                    "b9939d7cecea42bcb590354f03e35fb3"
+                ]
+            ],
+            "x": 0,
+            "y": 7
+        },
+        {
+            "grid": [
+                [
+                    "name",
+                    "pc"
+                ]
+            ],
+            "h": 3,
+            "w": 6,
+            "widget": [
+                [
+                    "uuid",
+                    "3ede408238464ce689894035a24e9643"
+                ]
+            ],
+            "x": 6,
+            "y": 7
+        },
+        {
+            "grid": [
+                [
+                    "name",
+                    "pc"
+                ]
+            ],
+            "h": 4,
+            "w": 6,
+            "widget": [
+                [
+                    "uuid",
+                    "8bbc96a69a10426d840078a5a4536ed1"
+                ]
+            ],
+            "x": 0,
+            "y": 13
+        },
+        {
+            "grid": [
+                [
+                    "name",
+                    "pc"
+                ]
+            ],
+            "h": 4,
+            "w": 6,
+            "widget": [
+                [
+                    "uuid",
+                    "18ebf26c1ed64335be9f4d280e576898"
+                ]
+            ],
+            "x": 0,
+            "y": 3
+        },
+        {
+            "grid": [
+                [
+                    "name",
+                    "pc"
+                ]
+            ],
+            "h": 3,
+            "w": 6,
+            "widget": [
+                [
+                    "uuid",
+                    "76d9b817be2e4f5a967f692031307ee2"
+                ]
+            ],
+            "x": 6,
+            "y": 10
+        },
+        {
+            "grid": [
+                [
+                    "name",
+                    "pc"
+                ]
+            ],
+            "h": 3,
+            "w": 6,
+            "widget": [
+                [
+                    "uuid",
+                    "518f0c11f99945c8ad48e93deaca783a"
+                ]
+            ],
+            "x": 0,
+            "y": 0
+        },
+        {
+            "grid": [
+                [
+                    "name",
+                    "pc"
+                ]
+            ],
+            "h": 3,
+            "w": 6,
+            "widget": [
+                [
+                    "uuid",
+                    "bd5c7dfd50cb4d52a5369a50b55bbacd"
+                ]
+            ],
+            "x": 6,
+            "y": 0
+        },
+        {
+            "grid": [
+                [
+                    "name",
+                    "pc"
+                ]
+            ],
+            "h": 3,
+            "w": 6,
+            "widget": [
+                [
+                    "uuid",
+                    "34bbec139bda4dbeb4dc1bc05b4ce05b"
+                ]
+            ],
+            "x": 0,
+            "y": 10
+        }
+    ],
+    "WidgetSeriesGroup": [
+        {
+            "are_sources_combined": false,
+            "group_by_label": "_none_",
+            "index": 0,
+            "is_exact_topn_match": false,
+            "is_ratio": false,
+            "topn_key": null,
+            "topn_max": 5,
+            "widget": [
+                [
+                    "uuid",
+                    "518f0c11f99945c8ad48e93deaca783a"
+                ]
+            ]
+        },
+        {
+            "are_sources_combined": false,
+            "group_by_label": "_none_",
+            "index": 0,
+            "is_exact_topn_match": false,
+            "is_ratio": false,
+            "topn_key": null,
+            "topn_max": 5,
+            "widget": [
+                [
+                    "uuid",
+                    "bd5c7dfd50cb4d52a5369a50b55bbacd"
+                ]
+            ]
+        },
+        {
+            "are_sources_combined": false,
+            "group_by_label": "Rdp Record Server",
+            "index": 0,
+            "is_exact_topn_match": false,
+            "is_ratio": false,
+            "topn_key": null,
+            "topn_max": 5,
+            "widget": [
+                [
+                    "uuid",
+                    "34bbec139bda4dbeb4dc1bc05b4ce05b"
+                ]
+            ]
+        },
+        {
+            "are_sources_combined": false,
+            "group_by_label": "Rdp Record Client",
+            "index": 0,
+            "is_exact_topn_match": false,
+            "is_ratio": false,
+            "topn_key": null,
+            "topn_max": 5,
+            "widget": [
+                [
+                    "uuid",
+                    "b9939d7cecea42bcb590354f03e35fb3"
+                ]
+            ]
+        },
+        {
+            "are_sources_combined": false,
+            "group_by_label": "Clients",
+            "index": 0,
+            "is_exact_topn_match": false,
+            "is_ratio": false,
+            "topn_key": null,
+            "topn_max": 5,
+            "widget": [
+                [
+                    "uuid",
+                    "3ede408238464ce689894035a24e9643"
+                ]
+            ]
+        },
+        {
+            "are_sources_combined": false,
+            "group_by_label": "Rdp Detail",
+            "index": 0,
+            "is_exact_topn_match": false,
+            "is_ratio": false,
+            "topn_key": null,
+            "topn_max": 10,
+            "widget": [
+                [
+                    "uuid",
+                    "8bbc96a69a10426d840078a5a4536ed1"
+                ]
+            ]
+        },
+        {
+            "are_sources_combined": false,
+            "group_by_label": "Ssh Detail",
+            "index": 0,
+            "is_exact_topn_match": false,
+            "is_ratio": false,
+            "topn_key": null,
+            "topn_max": 10,
+            "widget": [
+                [
+                    "uuid",
+                    "de1dd8828a8e410bb16ba7780ad4a81a"
+                ]
+            ]
+        },
+        {
+            "are_sources_combined": false,
+            "group_by_label": "Server Port",
+            "index": 0,
+            "is_exact_topn_match": false,
+            "is_ratio": false,
+            "topn_key": null,
+            "topn_max": 10,
+            "widget": [
+                [
+                    "uuid",
+                    "759ea1032e314cad9eaec8fbfea83cbe"
+                ]
+            ]
+        },
+        {
+            "are_sources_combined": false,
+            "group_by_label": "Rdp Record Port",
+            "index": 0,
+            "is_exact_topn_match": false,
+            "is_ratio": false,
+            "topn_key": null,
+            "topn_max": 5,
+            "widget": [
+                [
+                    "uuid",
+                    "18ebf26c1ed64335be9f4d280e576898"
+                ]
+            ]
+        },
+        {
+            "are_sources_combined": false,
+            "group_by_label": "Servers",
+            "index": 0,
+            "is_exact_topn_match": false,
+            "is_ratio": false,
+            "topn_key": null,
+            "topn_max": 5,
+            "widget": [
+                [
+                    "uuid",
+                    "76d9b817be2e4f5a967f692031307ee2"
+                ]
+            ]
+        }
+    ]
+}
